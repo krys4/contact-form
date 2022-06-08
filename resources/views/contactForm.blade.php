@@ -18,13 +18,11 @@
     </head>
     <body class="antialiased">
     <body>
+        <h1>Contact Form</h1> 
     <div class="container">
-        <div class="row mt-5 mb-5">
-            <div class="col-8 offset-2 mt-5">
+        <div class="row">
+            
                 <div class="card">
-                    <div class="card-header bg-info">
-                        <h3 class="text-white">Laravel 8 Contact Form Example - NiceSnippets.com</h3>
-                    </div>
                     <div class="card-body">
                         
                         @if(Session::has('success'))
@@ -39,74 +37,53 @@
                         <form method="POST" action="{{ route('contact-form.store') }}">
                   
                             {{ csrf_field() }}
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <strong>First Name:</strong>
-                                        <input type="text" name="fname" class="form-control" placeholder="First Name" value="{{ old('fname') }}">
+                            
+                                <div class="form-group">
+                                        <input type="text" name="fname" style="border: 1px outset #F7730E;" class="form-control" placeholder="First Name" value="{{ old('fname') }}">
                                         @if ($errors->has('fname'))
                                             <span class="text-danger">{{ $errors->first('fname') }}</span>
                                         @endif
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <strong>Last Name:</strong>
-                                        <input type="text" name="lname" class="form-control" placeholder="Last Name" value="{{ old('lname') }}">
+                                
+                                        <input type="text" name="lname" style="border: 1px outset #F7730E;" class="form-control" placeholder="Last Name" value="{{ old('lname') }}">
                                         @if ($errors->has('lname'))
                                             <span class="text-danger">{{ $errors->first('lname') }}</span>
                                         @endif
-                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <strong>Email:</strong>
-                                        <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                            
+                            
+                                <div class="form-group">
+                                        <input type="text" name="email" style="border: 1px outset #F7730E;" class="form-control" placeholder="Email" value="{{ old('email') }}">
                                         @if ($errors->has('email'))
                                             <span class="text-danger">{{ $errors->first('email') }}</span>
                                         @endif
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <strong>Phone:</strong>
-                                        <input type="text" name="phone" class="form-control" placeholder="Phone" value="{{ old('phone') }}">
+                               
+                                        <input type="text" name="phone" style="border: 1px outset #F7730E;" class="form-control" placeholder="Phone" value="{{ old('phone') }}">
                                         @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
                                         @endif
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
+                                     </div>
+                            
+                                <div class="form-group">
                                         <strong>Subject:</strong>
-                                        <input type="text" name="subject" class="form-control" placeholder="Subject" value="{{ old('subject') }}">
+                                        <input type="text" name="subject" style="border: 1px outset #F7730E;" class="form-control" placeholder="Required" value="{{ old('subject') }}">
                                         @if ($errors->has('subject'))
                                             <span class="text-danger">{{ $errors->first('subject') }}</span>
                                         @endif
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
+                                        </div>
+                                        <div>
                                         <strong>Message:</strong>
-                                        <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
+                                        <textarea name="message" rows="1" class="form-control" style="border: 1px outset #F7730E;">{{ old('message') }}</textarea>
                                         @if ($errors->has('message'))
                                             <span class="text-danger">{{ $errors->first('message') }}</span>
-                                        @endif
-                                    </div>  
-                                </div>
-                            </div>
-                   
-                            <div class="form-group text-center">
+                                        @endif  
+        </div>
+        <div >
                                 <button class="btn btn-success btn-submit">Save</button>
-                            </div>
-                        </form>
+                            </div>  
+                        </form> 
+                        
                     </div>
                 </div>
-            </div>
         </div>
     </div>
     </body>
