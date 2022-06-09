@@ -17,7 +17,6 @@ Route::get('/', function () {
     return view('contactForm');
 });
 
-
-
+//Route::get('/', [App\Http\Controllers\ContactController::class, 'index']);
 Route::get('/contact-form', [App\Http\Controllers\ContactController::class, 'contactForm'])->name('contact-form');
 Route::post('/contact-form', [App\Http\Controllers\ContactController::class, 'storeContactForm'])->name('contact-form.store');
